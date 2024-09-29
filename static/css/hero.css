@@ -1,0 +1,110 @@
+.nav-desktop {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.hero-section {
+    width: 100vw;
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.hero-section img {
+    width: 100%;
+    /* minus 80px from nav */
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .cta-btn {
+    margin: 10px 0;
+}
+
+.hero-content h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 23px;
+}
+
+.cta-btn {
+    position: relative;
+    padding: 20px 20px;
+    background-color: #fff;
+    /* Initial background color */
+    color: #333;
+    /* Initial text color */
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    transition: color 0.4s ease;
+    /* Smooth text color transition */
+    z-index: 1;
+    /* Ensure the text stays on top of the pseudo-element */
+}
+
+/* sliding effect for button*/
+.cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    /* Initially off-screen to the left */
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    /* Grey background color */
+    transition: left 0.4s ease;
+    /* Smooth background slide transition */
+    z-index: -1;
+    /* Ensure the pseudo-element stays behind the text */
+}
+
+.cta-btn:hover::before {
+    left: 0;
+    /* Slide background from left to right */
+}
+
+.cta-btn:hover {
+    color: #fff;
+    /* Change text color to white on hover */
+}
