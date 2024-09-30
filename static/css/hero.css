@@ -23,18 +23,23 @@ nav ul li a {
     color: #333;
 }
 
+
+
 .hero-section {
     width: 100vw;
     position: relative;
-    width: 100vw;
     height: calc(100vh - 80px);
     overflow: hidden;
 }
 
-.hero-section img {
+
+.hero-img {
     width: 100%;
+    height: 100%;
+    /* Ensures the image height always matches the div height */
     /* minus 80px from nav */
     object-fit: cover;
+    filter: brightness(80%);
 }
 
 .hero-content {
@@ -58,8 +63,8 @@ nav ul li a {
 }
 
 .hero-content h1 {
-    font-size: 80px;
-    font-weight: 700;
+    font-size: 100px;
+    font-weight: 300;
 }
 
 .hero-content p {

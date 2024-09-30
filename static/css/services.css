@@ -1,0 +1,160 @@
+/* General styles for the service section */
+#services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 25%;
+    /* Adjusting to have 4 items in a row */
+    box-sizing: border-box;
+    height: 500px;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+}
+
+.floral-white-bg {
+    background-color: #fef8f4;
+}
+
+
+
+.service h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.service p {
+    font-size: 1em;
+    color: #555;
+}
+
+.service .read-more {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.service .read-more:hover {
+    background-color: #555;
+}
+
+/* Seciton2*/
+#about {
+    display: flex;
+    width: 100%;
+    min-height: 800px;
+    /* Ensures a minimum height, but can be adjusted */
+    align-items: stretch;
+    /* Ensures both columns have equal height */
+}
+
+.left-about,
+.right-about {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-mission {
+    padding: 40px;
+    flex: 1;
+}
+
+.right-mission-img {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.right-mission-img img {
+    width: 50%;
+    /* Each image takes half of the space minus the gap */
+    height: 100%;
+    /* Makes sure images fill the height of the section */
+    object-fit: cover;
+    /* Ensures the images cover their containers */
+}
+
+
+/* Tablet view */
+@media screen and (max-width: 1024px) {
+    .service {
+        flex: 1 1 calc(50% - 20px);
+        /* Adjust for 2 items in a row on tablets */
+    }
+
+    .left-about,
+    .right-about {
+        width: 100%;
+        height: auto;
+        flex: none;
+        /* Reset flex properties to allow natural growth */
+    }
+
+    .right-mission-img {
+        flex-direction: column;
+    }
+
+    .right-mission-img img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .about-mission {
+        padding: 30px;
+    }
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .service {
+        flex: 1 1 100%;
+        /* Full width on mobile */
+    }
+
+    .left-about,
+    .right-about {
+        width: 100%;
+        height: auto;
+        flex: none;
+    }
+
+    .about-mission {
+        padding: 20px;
+    }
+
+    .right-mission-img {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .right-mission-img img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
